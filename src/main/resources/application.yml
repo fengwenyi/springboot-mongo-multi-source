@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: springboot-mongo-multi-source
+
+  data:
+    mongodb:
+      primary:
+        uri: mongodb://localhost:27017/db1
+      secondary:
+        uri: mongodb://localhost:27017/db2
