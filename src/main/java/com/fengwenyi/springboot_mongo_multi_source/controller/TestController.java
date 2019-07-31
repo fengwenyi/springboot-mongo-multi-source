@@ -66,7 +66,9 @@ public class TestController {
     public ApiResult loginLog() {
         Query query = new Query();
         List<LoginLog> loginLogs = mongoTemplate.find(query, LoginLog.class);
-        return ApiResult.success(loginLogs);
+        List<User> userList = mongoTemplate.find(query, User.class);
+//        return ApiResult.success(loginLogs);
+        return ApiResult.success(userList);
     }
 
 }
